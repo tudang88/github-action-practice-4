@@ -1,0 +1,15 @@
+name: On Issues Checker
+on:
+  issues:
+    types: [opened, edited, deleted]
+jobs:
+    check:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Setup Node.js
+              uses: actions/setup-node@v1
+              with:
+                node-version: '14'
+            - name: echo metadatas
+              run: echo ${{ toJson(github.event) }}
