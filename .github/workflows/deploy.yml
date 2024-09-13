@@ -3,6 +3,12 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '.github/workflows/**'
+      - 'README.md'
+      - 'LICENSE'
+      - 'node_modules/**'
+      - 'dist/**'
   workflow_dispatch:
 jobs:
     lint:
