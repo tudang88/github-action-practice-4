@@ -7,4 +7,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: echo metadatas
-              run: echo ${{ toJson(github.event) }}
+              run: echo ${{ toJson(github.event.issue) }}
