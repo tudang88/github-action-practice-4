@@ -6,5 +6,5 @@ jobs:
     check:
         runs-on: ubuntu-latest
         steps:
-            - name: echo metadatas
-              run: echo ${{ toJson(github.event.issue) }}
+            - name: Event Data
+              run: echo "${{ toJson(github.event.issue) }}"
